@@ -1,0 +1,50 @@
+.trainers {
+    background-color: $color-secondary;
+    grid-column: col-start 7 / full-end;
+    padding: 3rem;
+
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    grid-row-gap: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+    }
+
+    &__list {
+
+        display: grid;
+        grid-template-columns: min-content max-content;
+        grid-column-gap: 2rem;
+        grid-row-gap: 5vh;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-large) {
+            // grid-template-columns: min-content minmax(min-content, 12.5rem);
+            grid-template-columns: min-content minmax(min-content, min-content);
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: repeat(auto-fit, minmax(min-content 1fr));
+            grid-row-gap: 3vh;
+        }
+
+    }
+
+    &__img {
+        width: 10rem;
+        height: 10rem;
+        object-fit: cover;
+        border-radius: 70%;
+        display: block;
+    }
+
+    &__details {
+        text-transform: uppercase;
+        color: $color-grey-light-2;
+        margin-top: -.3rem;
+
+    }
+}
